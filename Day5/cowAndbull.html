@@ -1,0 +1,133 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Cows and Bulls</title>
+    <script src="cowAndbull.js"></script>
+
+    <style>
+
+        /*body{
+            background-image:url('bulls.jpg');
+            background-size:cover;
+            background-attachment:fixed;
+            background-repeat:no-repeat;
+        }*/
+
+        body {
+            background: linear-gradient(120deg, #d4fc79 0%, #96e6a1 100%);
+        }
+
+        #output-table{
+            font-size:30px;
+            border:solid 2px black;
+            padding:10px;
+            background-color:aqua;
+            width:660px;
+        }
+
+        section {
+            display: flex;
+            flex:98%;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #input-table {
+            font-size: 30px;
+            border: solid 2px black;
+            padding: 30px;
+            background: repeating-linear-gradient(royalblue,peachpuff);
+            border-radius: 10px;
+        }
+
+        input {
+            font-size: 30px;
+            border: solid 2px black;
+            padding: 10px;
+            background-color: none;
+
+        }
+
+        button {
+            font-size: 30px;
+            border: solid 2px black;
+            padding: 10px;
+            background-color:lightgoldenrodyellow;
+            border-radius: 10px;
+            margin:auto;
+        }
+
+        button:hover{
+            background-color:lightpink;
+            border-radius:20px;
+            cursor:pointer;
+        }
+
+        input:hover {
+            background-color: lightpink;
+            border-radius: 5px;
+            box-shadow:0 10px 10px 0 grey;
+        }
+
+        tr, td {
+            margin: 40px;
+            padding: 10px;
+        }
+
+        #output-table tr td,th{
+            border:solid 2px black;
+        }
+    </style>
+
+</head>
+<body>
+
+    <section>
+
+        <table id="input-table">
+
+            <tr>
+                <td>Existing Word</td>
+                <td>
+                    <input type="password" id="old" placeholder="Enter the word" />
+                </td>
+            </tr>
+
+            <tr>
+                <td>New Word</td>
+                <td>
+                    <input type="text" id="new" placeholder="Enter the word" />
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <button onclick="compares()">Check</button>
+                </td>
+                <td>
+                    <button onclick="clears()">Clear</button>
+                </td>
+            </tr>
+
+        </table>
+
+    </section>
+    <br /><br />
+    <section>
+         <table id="output-table">
+
+             <thead>
+                 <tr>
+                     <th>Word</th>
+                     <th>Cows</th>
+                     <th>Bulls</th>
+                 </tr>
+             </thead>
+
+         </table>
+    </section>
+
+</body>
+</html>

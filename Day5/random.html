@@ -1,0 +1,48 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Random</title>
+    <script>
+        function func(min, max) {
+            document.getElementById("screen").value = Math.ceil(Math.random() * (max - min) + min);
+        }
+    </script>
+
+    <style>
+        section{
+            border:solid 2px black;
+            display:inline-block;
+            padding:50px;
+            position:relative;
+            left:400px;
+            top:200px;
+            background-color:lightyellow;
+            border-radius:10px;
+        }
+        input{
+            font-size:20px;
+        }
+        button{
+            width:60px;
+            height:30px;
+            background-color:lightcoral;
+        }
+        button:hover {
+            background-color: aqua;
+            cursor: pointer;
+        }
+        button:active {
+            background-color: white;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <input type="tel" id="screen" placeholder="Welcome"/>
+        <button onclick="func(1,6)">Click</button>
+    </section>
+</body>
+</html>
