@@ -1,0 +1,100 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+    <title>Movie Details</title>
+    <script src="MovieEdited.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.3.js"></script>
+    <script>
+        $(document).ready(function () {
+            var entered_name;
+            var entered_duration;
+            var entered_rating;
+            $("#mveName").blur(function () {
+                entered_name = $("#mveName").val();
+                if (entered_name == '') {
+                    $("#mveName").removeClass("valid");
+                    $("#mveName").addClass("Invalid");
+                }
+                else {
+                    $("#mveName").removeClass("Invalid");
+                    $("#mveName").addClass("valid");
+                }
+                //console.log(typeof (entered_duration));
+                //if (typeof(entered_duration) == typeof(1))
+                //    $("#mveDuration").css("border-color", "blue");
+                //else
+                //    $("#mveDuration").css("border-color", "violet");
+
+
+            })
+            $("#mveDuration").blur(function () {
+                entered_duration = $("#mveDuration").val();
+                if (entered_duration == '') {
+                    $("#mveDuration").removeClass("valid");
+                    $("#mveDuration").addClass("Invalid");
+                }
+                else {
+                    $("#mveDuration").removeClass("Invalid");
+                    $("#mveDuration").addClass("valid");
+                }
+            })
+        })
+    </script>
+    <link href="MovieEdited.css" rel="stylesheet"/>
+</head>
+<body>
+
+    <section id="form-section">
+        <div id="form-div">
+            <label>Movie Name</label>
+            <input type="text" id="mveName" placeholder="Enter the Movie Name" />
+            <br />
+            <br />
+
+            <label>Movie Duration</label>
+            <input type="tel" id="mveDuration" placeholder="Enter the Movie Duration" />
+            <br />
+            <br />
+
+            <label>Movie Rating</label>
+            <select id="mveRating">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+            </select>
+            <br />
+            <br />
+
+            <div id="buttons">
+                <button id="login" onclick="register()">Enter</button>
+            </div>
+            <div id="buttons">
+                <button id="delete" onclick="deletes()">Delete</button>
+            </div>
+
+        </div>
+
+    </section>
+
+    <section id="table-section">
+        <table id="table">
+            <thead>
+                <tr>
+                    <th>Movie Name</th>
+                    <th>Movie Duration</th>
+                    <th>Movie Rating</th>
+                </tr>
+            </thead>
+            <tbody>
+
+            </tbody>
+        </table>
+    </section>
+
+</body>
+</html>
