@@ -1,0 +1,37 @@
+﻿section {
+    display: inline-block;
+    position: relative;
+    left: 600px;
+    top: 150px;
+    border: solid 2px black;
+    padding: 10px;
+    background-color: dimgrey;
+    border-radius: 10px;
+}
+
+button {
+    padding: 20px;
+    background-color: black;
+    font-size: 30px;
+    color: white;
+    margin: 10px;
+    display: inline-block;
+    border-radius: 20px;
+}
+
+#screen{
+    padding:20px;
+    width:200px;
+    font-size:20px;
+    border-radius:10px;
+}
+
+button:hover{
+    cursor:pointer;
+    box-shadow:0 10px 10px 0 cornsilk; 
+}
+
+button:active{
+    background-color:ghostwhite;
+    color:black;
+}

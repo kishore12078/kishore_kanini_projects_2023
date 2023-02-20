@@ -1,0 +1,72 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+    <title>Calculator</title>
+    <link href="calculator.css" rel="stylesheet"/>
+</head>
+<body>
+
+    <section>
+
+        <div>
+            <input type="text" placeholder="Empty" id="screen" />
+            <button onclick="clearDiv()">C</button>
+        </div>
+
+        <div>
+            <button onclick="shown(7)">7</button>
+            <button onclick="shown(8)">8</button>
+            <button onclick="shown(9)">9</button>
+            <button onclick="shown('/')">&divide;</button>
+        </div>
+
+        <div>
+            <button onclick="shown(4)">4</button>
+            <button onclick="shown(5)">5</button>
+            <button onclick="shown(6)">6</button>
+            <button onclick="shown('*')">*</button>
+        </div>
+
+        <div>
+            <button onclick="shown(1)">1</button>
+            <button onclick="shown(2)">2</button>
+            <button onclick="shown(3)">3</button>
+            <button onclick="shown('-')">-</button>
+        </div>
+
+        <div>
+            <button onclick="shown(0)">0</button>
+            <button onclick="shown('.')">.</button>
+            <button onclick="shown('+')">+</button>
+            <button onclick="result()">=</button>
+        </div>
+
+        <script>
+
+            var left = '';
+
+            function shown(num) {
+                left = left + num;
+                document.getElementById("screen").value = left;
+            }
+
+            function result(){
+                document.getElementById("screen").value = eval(left);
+                
+            }
+
+            function clearDiv() {
+                document.getElementById("screen").value = '0';
+                left = '';
+            }
+
+
+        </script>
+
+    </section>
+
+</body>
+</html>
